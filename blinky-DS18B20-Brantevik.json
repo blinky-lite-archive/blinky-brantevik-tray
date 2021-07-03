@@ -1,13 +1,13 @@
 {
   "deviceType": "blinky-DS18B20",
-  "name": "01",
+  "name": "Brantevik",
   "arcPeriod": 60000,
-  "timeStamp": 1617736565836,
-  "lastArchive": 1617736537654,
+  "timeStamp": 1622313185065,
+  "lastArchive": 1622313185065,
   "linkQuality": {
     "action": "reading",
     "type": "scalar",
-    "value": 40,
+    "value": 63,
     "unit": "/70",
     "alarm": {
       "value": 0,
@@ -27,10 +27,10 @@
   "signalLevel": {
     "action": "reading",
     "type": "scalar",
-    "value": -70,
+    "value": -47,
     "unit": "dBm",
     "alarm": {
-      "value": 1,
+      "value": 0,
       "limits": {
         "lolo": -70,
         "low": -60,
@@ -87,7 +87,27 @@
   "tempA": {
     "action": "reading",
     "type": "scalar",
-    "value": 4.13,
+    "value": 10.19,
+    "unit": "degrees",
+    "alarm": {
+      "value": 1,
+      "limits": {
+        "lolo": 0,
+        "low": 15,
+        "high": 24,
+        "hihi": 30
+      },
+      "notify": {
+        "name": "",
+        "number": "",
+        "time": 0
+      }
+    }
+  },
+  "tempB": {
+    "action": "reading",
+    "type": "scalar",
+    "value": 10.19,
     "unit": "degrees",
     "alarm": {
       "value": 1,
@@ -104,18 +124,38 @@
       }
     }
   },
-  "tempB": {
+  "vbat": {
     "action": "reading",
     "type": "scalar",
-    "value": 4.13,
-    "unit": "degrees",
+    "value": 4.11,
+    "unit": "Volts",
     "alarm": {
-      "value": 1,
+      "value": 0,
       "limits": {
-        "lolo": 0,
-        "low": 12,
-        "high": 24,
-        "hihi": 36
+        "lolo": 3.3,
+        "low": 3.5,
+        "high": 4.5,
+        "hihi": 5
+      },
+      "notify": {
+        "name": "",
+        "number": "",
+        "time": 0
+      }
+    }
+  },
+  "lora": {
+    "action": "reading",
+    "type": "scalar",
+    "value": -80,
+    "unit": "dBm",
+    "alarm": {
+      "value": 0,
+      "limits": {
+        "lolo": -100,
+        "low": -100,
+        "high": 0,
+        "hihi": 0
       },
       "notify": {
         "name": "",
