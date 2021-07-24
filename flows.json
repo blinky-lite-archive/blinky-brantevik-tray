@@ -2785,7 +2785,7 @@
         "type": "function",
         "z": "ee1d0fce.3bab4",
         "name": "Set DeviceA Readings",
-        "func": "var newSettingDoneMsg = {topic:'newSettingDone', payload:true};\nvar device = flow.get('device');\ndevice.tempA.value = msg.payload.temperature + 1.5;\ndevice.tempB.value = msg.payload.temperature + 1.5;\ndevice.lora.value = msg.payload.lora;\ndevice.vbat.value = msg.payload.vbat;\nif (device.tempA.value < -40.0) return null;\nreturn newSettingDoneMsg;",
+        "func": "var newSettingDoneMsg = {topic:'newSettingDone', payload:true};\nvar device = flow.get('device');\ndevice.tempA.value = msg.payload.temperature + 1.5;\ndevice.tempB.value = msg.payload.temperature + 1.5;\ndevice.lora.value = msg.payload.lora;\ndevice.vbat.value = msg.payload.vbat;\ndevice.ultraDistance.value = msg.payload.windSpeed;\nif (device.tempA.value < -40.0) return null;\n\nnodeState = context.get('nodeState');\nif (nodeState == undefined) \n{\n    device.ultraDistanceAvg.value = device.ultraDistance.value;\n    context.set('nodeState',true);\n}\nelse\n{\n    device.ultraDistanceAvg.value = device.ultraDistanceAvg.value + (device.ultraDistance.value - device.ultraDistanceAvg.value) / 100.0;\n}\ndevice.ultraDistance.value    = Math.round(100 * device.ultraDistance.value) / 100;\ndevice.ultraDistanceAvg.value = Math.round(100 * device.ultraDistanceAvg.value) / 100;\n\nreturn newSettingDoneMsg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",

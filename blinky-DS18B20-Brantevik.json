@@ -124,6 +124,66 @@
       }
     }
   },
+  "ultraDistance": {
+    "action": "reading",
+    "type": "scalar",
+    "value": 10.19,
+    "unit": "cm",
+    "alarm": {
+      "value": 1,
+      "limits": {
+        "lolo": 10,
+        "low": 10,
+        "high": 170,
+        "hihi": 170
+      },
+      "notify": {
+        "name": "",
+        "number": "",
+        "time": 0
+      }
+    }
+  },
+  "ultraDistanceAvg": {
+    "action": "reading",
+    "type": "scalar",
+    "value": 10.19,
+    "unit": "cm",
+    "alarm": {
+      "value": 1,
+      "limits": {
+        "lolo": 10,
+        "low": 10,
+        "high": 170,
+        "hihi": 170
+      },
+      "notify": {
+        "name": "",
+        "number": "",
+        "time": 0
+      }
+    }
+  },
+  "refDistance": {
+    "action": "setting",
+    "type": "scalar",
+    "value": 70,
+    "unit": "cm",
+    "alarm": {
+      "value": 1,
+      "limits": {
+        "lolo": 10,
+        "low": 10,
+        "high": 170,
+        "hihi": 170
+      },
+      "notify": {
+        "name": "",
+        "number": "",
+        "time": 0
+      }
+    }
+  },
   "vbat": {
     "action": "reading",
     "type": "scalar",
